@@ -35,6 +35,11 @@ namespace 夢幻模擬戰_抽卡模擬器
         }
         private void UpdateCount()
         {
+            if(Langrisser.Target_count != 0)
+            {
+                lbl_tgCount.Text = String.Format("已於 {0} 抽出現", (Langrisser.Target_count + 1).ToString());
+            }
+
             lbl_total_count.Text = Langrisser.Total.ToString();
             lbl_SSR_count.Text = Langrisser.SSR_Count.ToString();
             lbl_SR_count.Text = Langrisser.SR_Count.ToString();
@@ -102,6 +107,7 @@ namespace 夢幻模擬戰_抽卡模擬器
             ClearAllItems();
             pool = lottery_pools.SelectedIndex;
         }
+        
     }
     class CardResults
     {
@@ -125,9 +131,10 @@ namespace 夢幻模擬戰_抽卡模擬器
     {
         List<string> R_Cards = new List<string> { "基斯", "洛加", "斯科特", "路因", "利亞特", "安娜", "皮耶魯", "迪歐斯", "利斯塔", "潔西卡", "蕾蒂西亞" };
         List<string> SR_Cards = new List<string> { "埃格貝爾特", "海恩", "霧風", "伊梅爾達", "艾馬林克", "索尼婭", "芙拉基亞", "娜姆", "芙蕾亞", "莉法妮", "克莉絲", "蘭斯", "巴爾加斯", "法娜", "銀狼", "索菲亞" };
-        List<string> SSR_Cards = new List<string> { "巴恩哈特", "利昂", "艾爾文", "雷丁", "雪莉", "莉亞娜", "拉娜", "蒂亞莉絲", "亞魯特謬拉", "迪哈爾特", "露娜", "雪露法妮爾", "安潔莉娜", "波贊魯" };
+        List<string> SSR_Cards = new List<string> { "澤瑞達", "古巨拉", "巴恩哈特", "利昂", "艾爾文", "雷丁", "雪莉", "莉亞娜", "拉娜", "蒂亞莉絲", "亞魯特謬拉", "迪哈爾特", "露娜", "雪露法妮爾", "安潔莉娜", "波贊魯" };
         public static int SSR_Count = 0, SR_Count = 0, R_Count = 0, Total = 0;
-
+        public static int Target_count = 0;
+        
         List<string> Result = new List<string> { };
         public CardResults LotteryOnce(int pool)
         {
@@ -165,6 +172,7 @@ namespace 夢幻模擬戰_抽卡模擬器
                         inx = rnd.Next(0, 100);
                         if (inx < 45)
                         {
+                            Target_count = Total;
                             result.Modify("SSR", "澤瑞達");
                         }
                         else if (inx < 90)
@@ -253,6 +261,7 @@ namespace 夢幻模擬戰_抽卡模擬器
                                     inx = rnd.Next(0, 100);
                                     if (inx < 45)
                                     {
+                                        Target_count = Total;
                                         tmp.Modify("SSR", "澤瑞達");
                                     }
                                     else if (inx < 90)
@@ -325,6 +334,7 @@ namespace 夢幻模擬戰_抽卡模擬器
                                 inx = rnd.Next(0, 100);
                                 if (inx < 45)
                                 {
+                                    Target_count = Total;
                                     tmp.Modify("SSR", "澤瑞達");
                                 }
                                 else if (inx < 90)
@@ -364,8 +374,8 @@ namespace 夢幻模擬戰_抽卡模擬器
                         R_Count++;
                     }
                 }
+                Total++;
             }
-            Total += 10;
             return result;
         }
     }

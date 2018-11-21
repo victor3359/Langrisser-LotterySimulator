@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Langrisser_lottery));
             this.lottery_once = new System.Windows.Forms.Button();
             this.lottery_ten = new System.Windows.Forms.Button();
             this.lottery_results = new System.Windows.Forms.ListView();
@@ -47,8 +48,9 @@
             this.lbl_SR_ratio = new System.Windows.Forms.Label();
             this.lbl_SSR_percent = new System.Windows.Forms.Label();
             this.lbl_SR_percent = new System.Windows.Forms.Label();
-            this.pool_image = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pool_image)).BeginInit();
+            this.icon_target = new System.Windows.Forms.PictureBox();
+            this.lbl_tgCount = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.icon_target)).BeginInit();
             this.SuspendLayout();
             // 
             // lottery_once
@@ -245,21 +247,33 @@
             this.lbl_SR_percent.Text = "%";
             this.lbl_SR_percent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pool_image
+            // icon_target
             // 
-            this.pool_image.Location = new System.Drawing.Point(326, 12);
-            this.pool_image.Name = "pool_image";
-            this.pool_image.Size = new System.Drawing.Size(355, 116);
-            this.pool_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pool_image.TabIndex = 20;
-            this.pool_image.TabStop = false;
+            this.icon_target.Image = ((System.Drawing.Image)(resources.GetObject("icon_target.Image")));
+            this.icon_target.Location = new System.Drawing.Point(326, 13);
+            this.icon_target.Name = "icon_target";
+            this.icon_target.Size = new System.Drawing.Size(127, 115);
+            this.icon_target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon_target.TabIndex = 20;
+            this.icon_target.TabStop = false;
+            // 
+            // lbl_tgCount
+            // 
+            this.lbl_tgCount.AutoSize = true;
+            this.lbl_tgCount.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_tgCount.Location = new System.Drawing.Point(459, 100);
+            this.lbl_tgCount.Name = "lbl_tgCount";
+            this.lbl_tgCount.Size = new System.Drawing.Size(86, 24);
+            this.lbl_tgCount.TabIndex = 22;
+            this.lbl_tgCount.Text = "還未出現";
             // 
             // Langrisser_lottery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 466);
-            this.Controls.Add(this.pool_image);
+            this.Controls.Add(this.lbl_tgCount);
+            this.Controls.Add(this.icon_target);
             this.Controls.Add(this.lbl_SR_percent);
             this.Controls.Add(this.lbl_SSR_percent);
             this.Controls.Add(this.lbl_SR_ratio);
@@ -282,7 +296,7 @@
             this.Name = "Langrisser_lottery";
             this.Text = "Langrisser 抽卡模擬器";
             this.Load += new System.EventHandler(this.Langrisser_lottery_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pool_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon_target)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +323,8 @@
         private System.Windows.Forms.Label lbl_SR_ratio;
         private System.Windows.Forms.Label lbl_SSR_percent;
         private System.Windows.Forms.Label lbl_SR_percent;
-        private System.Windows.Forms.PictureBox pool_image;
+        private System.Windows.Forms.PictureBox icon_target;
+        private System.Windows.Forms.Label lbl_tgCount;
     }
 }
 

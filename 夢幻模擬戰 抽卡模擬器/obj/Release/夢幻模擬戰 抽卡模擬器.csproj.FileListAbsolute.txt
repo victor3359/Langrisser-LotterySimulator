@@ -16,4 +16,3 @@ C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 �
 C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰 抽卡模擬器.csproj.CoreCompileInputs.cache
 C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.exe
 C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.pdb
-C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰 抽卡模擬器.csprojAssemblyReference.cache
