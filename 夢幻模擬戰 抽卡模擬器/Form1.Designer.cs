@@ -33,7 +33,6 @@
             this.lottery_results = new System.Windows.Forms.ListView();
             this.lottery_pools = new System.Windows.Forms.ComboBox();
             this.lbl_lottery_pools = new System.Windows.Forms.Label();
-            this.lbl_lottery_result = new System.Windows.Forms.Label();
             this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_SSRC = new System.Windows.Forms.Label();
             this.lbl_SRC = new System.Windows.Forms.Label();
@@ -48,6 +47,8 @@
             this.lbl_SR_ratio = new System.Windows.Forms.Label();
             this.lbl_SSR_percent = new System.Windows.Forms.Label();
             this.lbl_SR_percent = new System.Windows.Forms.Label();
+            this.pool_image = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pool_image)).BeginInit();
             this.SuspendLayout();
             // 
             // lottery_once
@@ -75,9 +76,9 @@
             // lottery_results
             // 
             this.lottery_results.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lottery_results.Location = new System.Drawing.Point(326, 39);
+            this.lottery_results.Location = new System.Drawing.Point(326, 134);
             this.lottery_results.Name = "lottery_results";
-            this.lottery_results.Size = new System.Drawing.Size(355, 415);
+            this.lottery_results.Size = new System.Drawing.Size(355, 320);
             this.lottery_results.TabIndex = 2;
             this.lottery_results.UseCompatibleStateImageBehavior = false;
             this.lottery_results.View = System.Windows.Forms.View.Details;
@@ -98,19 +99,9 @@
             this.lbl_lottery_pools.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_lottery_pools.Location = new System.Drawing.Point(12, 100);
             this.lbl_lottery_pools.Name = "lbl_lottery_pools";
-            this.lbl_lottery_pools.Size = new System.Drawing.Size(105, 24);
+            this.lbl_lottery_pools.Size = new System.Drawing.Size(67, 24);
             this.lbl_lottery_pools.TabIndex = 4;
-            this.lbl_lottery_pools.Text = "選擇卡池：";
-            // 
-            // lbl_lottery_result
-            // 
-            this.lbl_lottery_result.AutoSize = true;
-            this.lbl_lottery_result.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_lottery_result.Location = new System.Drawing.Point(326, 12);
-            this.lbl_lottery_result.Name = "lbl_lottery_result";
-            this.lbl_lottery_result.Size = new System.Drawing.Size(67, 24);
-            this.lbl_lottery_result.TabIndex = 5;
-            this.lbl_lottery_result.Text = "結果：";
+            this.lbl_lottery_pools.Text = "卡池：";
             // 
             // lbl_total
             // 
@@ -254,11 +245,21 @@
             this.lbl_SR_percent.Text = "%";
             this.lbl_SR_percent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pool_image
+            // 
+            this.pool_image.Location = new System.Drawing.Point(326, 12);
+            this.pool_image.Name = "pool_image";
+            this.pool_image.Size = new System.Drawing.Size(355, 116);
+            this.pool_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pool_image.TabIndex = 20;
+            this.pool_image.TabStop = false;
+            // 
             // Langrisser_lottery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 466);
+            this.Controls.Add(this.pool_image);
             this.Controls.Add(this.lbl_SR_percent);
             this.Controls.Add(this.lbl_SSR_percent);
             this.Controls.Add(this.lbl_SR_ratio);
@@ -273,7 +274,6 @@
             this.Controls.Add(this.lbl_SRC);
             this.Controls.Add(this.lbl_SSRC);
             this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.lbl_lottery_result);
             this.Controls.Add(this.lbl_lottery_pools);
             this.Controls.Add(this.lottery_pools);
             this.Controls.Add(this.lottery_results);
@@ -282,6 +282,7 @@
             this.Name = "Langrisser_lottery";
             this.Text = "Langrisser 抽卡模擬器";
             this.Load += new System.EventHandler(this.Langrisser_lottery_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pool_image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +295,6 @@
         private System.Windows.Forms.ListView lottery_results;
         private System.Windows.Forms.ComboBox lottery_pools;
         private System.Windows.Forms.Label lbl_lottery_pools;
-        private System.Windows.Forms.Label lbl_lottery_result;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_SSRC;
         private System.Windows.Forms.Label lbl_SRC;
@@ -309,6 +309,7 @@
         private System.Windows.Forms.Label lbl_SR_ratio;
         private System.Windows.Forms.Label lbl_SSR_percent;
         private System.Windows.Forms.Label lbl_SR_percent;
+        private System.Windows.Forms.PictureBox pool_image;
     }
 }
 

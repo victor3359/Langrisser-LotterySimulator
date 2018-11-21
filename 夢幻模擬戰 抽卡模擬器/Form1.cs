@@ -15,6 +15,7 @@ namespace 夢幻模擬戰_抽卡模擬器
     {
         CardPools pools = new CardPools();
         Langrisser langrisser = new Langrisser();
+        List<Image> pool_ImageList = new List<Image>();
         static int pool = 0;
         static bool __continue = true;
         public Langrisser_lottery()
@@ -50,7 +51,7 @@ namespace 夢幻模擬戰_抽卡模擬器
             lottery_results.MultiSelect = true;
             lottery_results.Columns.Add("稀有度", 100, HorizontalAlignment.Left);
             lottery_results.Columns.Add("英雄名", 200, HorizontalAlignment.Left);
-
+            
             foreach (string pool in pools.getPools())
             {
                 lottery_pools.Items.Add(pool);
@@ -58,7 +59,7 @@ namespace 夢幻模擬戰_抽卡模擬器
             lottery_pools.SelectedIndex = 0;
             pool = lottery_pools.SelectedIndex;
             
-            lottery_Simulation();
+            //lottery_Simulation();
         }
 
         private void lottery_Simulation()
@@ -114,7 +115,7 @@ namespace 夢幻模擬戰_抽卡模擬器
     }
     class CardPools
     {
-        private List<string> pools = new List<string> { "夏日泳裝姬", "光暗交響曲", "英雄召喚" };
+        private List<string> pools = new List<string> { "夏日姬精選", "光暗搖籃曲", "英雄召喚" };
         public List<string>getPools()
         {
             return pools;

@@ -7,3 +7,13 @@ C:\Users\ICPSI_SUBARU\source\repos\夢幻模擬戰 抽卡模擬器\夢幻模擬�
 C:\Users\ICPSI_SUBARU\source\repos\夢幻模擬戰 抽卡模擬器\夢幻模擬戰 抽卡模擬器\bin\Release\Langrisser 抽卡模擬器.pdb
 C:\Users\ICPSI_SUBARU\source\repos\夢幻模擬戰 抽卡模擬器\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.exe
 C:\Users\ICPSI_SUBARU\source\repos\夢幻模擬戰 抽卡模擬器\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.pdb
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\bin\Release\Langrisser 抽卡模擬器.exe.config
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\bin\Release\Langrisser 抽卡模擬器.exe
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\bin\Release\Langrisser 抽卡模擬器.pdb
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰_抽卡模擬器.Langrisser_lottery.resources
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser_抽卡模擬器.Properties.Resources.resources
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰 抽卡模擬器.csproj.GenerateResource.cache
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰 抽卡模擬器.csproj.CoreCompileInputs.cache
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.exe
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\Langrisser 抽卡模擬器.pdb
+C:\Users\ICPSI_SUBARU\source\repos\Langrisser-LotterySimulator\夢幻模擬戰 抽卡模擬器\obj\Release\夢幻模擬戰 抽卡模擬器.csprojAssemblyReference.cache
