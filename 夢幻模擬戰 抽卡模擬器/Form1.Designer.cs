@@ -50,6 +50,7 @@
             this.lbl_SR_percent = new System.Windows.Forms.Label();
             this.icon_target = new System.Windows.Forms.PictureBox();
             this.lbl_tgCount = new System.Windows.Forms.Label();
+            this.btn_rst = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.icon_target)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,11 +268,23 @@
             this.lbl_tgCount.TabIndex = 22;
             this.lbl_tgCount.Text = "還未出現";
             // 
+            // btn_rst
+            // 
+            this.btn_rst.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_rst.Location = new System.Drawing.Point(537, 13);
+            this.btn_rst.Name = "btn_rst";
+            this.btn_rst.Size = new System.Drawing.Size(144, 52);
+            this.btn_rst.TabIndex = 23;
+            this.btn_rst.Text = "重置";
+            this.btn_rst.UseVisualStyleBackColor = true;
+            this.btn_rst.Click += new System.EventHandler(this.btn_rst_Click);
+            // 
             // Langrisser_lottery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 466);
+            this.Controls.Add(this.btn_rst);
             this.Controls.Add(this.lbl_tgCount);
             this.Controls.Add(this.icon_target);
             this.Controls.Add(this.lbl_SR_percent);
@@ -325,6 +338,7 @@
         private System.Windows.Forms.Label lbl_SR_percent;
         private System.Windows.Forms.PictureBox icon_target;
         private System.Windows.Forms.Label lbl_tgCount;
+        private System.Windows.Forms.Button btn_rst;
     }
 }
 

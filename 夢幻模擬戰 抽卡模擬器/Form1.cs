@@ -37,15 +37,30 @@ namespace 夢幻模擬戰_抽卡模擬器
         {
             if(Langrisser.Target_count != 0)
             {
-                lbl_tgCount.Text = String.Format("已於 {0} 抽出現", (Langrisser.Target_count + 1).ToString());
+                lbl_tgCount.Text = String.Format("已於 {0} 抽時出現", (Langrisser.Target_count + 1).ToString());
             }
-
-            lbl_total_count.Text = Langrisser.Total.ToString();
-            lbl_SSR_count.Text = Langrisser.SSR_Count.ToString();
-            lbl_SR_count.Text = Langrisser.SR_Count.ToString();
-            lbl_R_count.Text = Langrisser.R_Count.ToString();
-            lbl_SSR_ratio.Text = Math.Round(((Math.Round((decimal)Langrisser.SSR_Count / Langrisser.Total, 4))*100), 2).ToString();
-            lbl_SR_ratio.Text = Math.Round(((Math.Round((decimal)Langrisser.SR_Count / Langrisser.Total, 4))*100), 2).ToString();
+            else
+            {
+                lbl_tgCount.Text = String.Format("尚未出現");
+            }
+            if(Langrisser.Total != 0)
+            {
+                lbl_total_count.Text = Langrisser.Total.ToString();
+                lbl_SSR_count.Text = Langrisser.SSR_Count.ToString();
+                lbl_SR_count.Text = Langrisser.SR_Count.ToString();
+                lbl_R_count.Text = Langrisser.R_Count.ToString();
+                lbl_SSR_ratio.Text = Math.Round(((Math.Round((decimal)Langrisser.SSR_Count / Langrisser.Total, 4)) * 100), 2).ToString();
+                lbl_SR_ratio.Text = Math.Round(((Math.Round((decimal)Langrisser.SR_Count / Langrisser.Total, 4)) * 100), 2).ToString();
+            }
+            else
+            {
+                lbl_total_count.Text = Langrisser.Total.ToString();
+                lbl_SSR_count.Text = Langrisser.SSR_Count.ToString();
+                lbl_SR_count.Text = Langrisser.SR_Count.ToString();
+                lbl_R_count.Text = Langrisser.R_Count.ToString();
+                lbl_SSR_ratio.Text = Langrisser.Total.ToString();
+                lbl_SR_ratio.Text = Langrisser.Total.ToString();
+            }
         }
         private void Langrisser_lottery_Load(object sender, EventArgs e)
         {
@@ -105,9 +120,17 @@ namespace 夢幻模擬戰_抽卡模擬器
         private void lottery_pools_SelectedIndexChanged(object sender, EventArgs e)
         {
             ClearAllItems();
+            langrisser.Reset();
+            UpdateCount();
             pool = lottery_pools.SelectedIndex;
         }
-        
+
+        private void btn_rst_Click(object sender, EventArgs e)
+        {
+            ClearAllItems();
+            langrisser.Reset();
+            UpdateCount();
+        }
     }
     class CardResults
     {
@@ -136,6 +159,15 @@ namespace 夢幻模擬戰_抽卡模擬器
         public static int Target_count = 0;
         
         List<string> Result = new List<string> { };
+
+        public void Reset()
+        {
+            SSR_Count = 0;
+            SR_Count = 0;
+            R_Count = 0;
+            Total = 0;
+            Target_count = 0;
+        }
         public CardResults LotteryOnce(int pool)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
